@@ -1,4 +1,4 @@
-package org.vastdata;
+package org.vastdata.demo;
 
 import java.io.BufferedReader;
 import java.io.IOException;

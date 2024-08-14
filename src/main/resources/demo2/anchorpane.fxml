@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.TextField?>
+<AnchorPane xmlns:fx="http://vastdata.javafx.com/javafx">
+    <children>
+        <Button id="fxmlbutton" text="hello" prefWidth="100" prefHeight="100">
+            <AnchorPane.leftAnchor>100</AnchorPane.leftAnchor>
+            <AnchorPane.topAnchor>100</AnchorPane.topAnchor>
+        </Button>
+    </children>
+</AnchorPane>

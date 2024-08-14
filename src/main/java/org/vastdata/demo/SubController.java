@@ -1,4 +1,4 @@
-package org.vastdata;
+package org.vastdata.demo;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

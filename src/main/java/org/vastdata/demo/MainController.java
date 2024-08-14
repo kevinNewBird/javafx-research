@@ -1,4 +1,4 @@
-package org.vastdata;
+package org.vastdata.demo;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -30,12 +30,12 @@ public class MainController implements Initializable {
     @FXML
     private void handleNextAction(ActionEvent event) throws IOException {
         System.out.println("1111");
-        Parent subPage = FXMLLoader.load(MainController.class.getClassLoader().getResource("sub.fxml"));
-        Scene subScene = new Scene(subPage);
-
-        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        window.setScene(subScene);
-        window.show();
+//        Parent subPage = FXMLLoader.load(MainController.class.getClassLoader().getResource("sub.fxml"));
+//        Scene subScene = new Scene(subPage);
+//
+//        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+//        window.setScene(subScene);
+//        window.show();
     }
 
     @Override

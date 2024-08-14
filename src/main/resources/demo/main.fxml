@@ -4,7 +4,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.vastdata.MainController">
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.vastdata.demo.MainController">
     <Label text="Welcome to the Installation Wizard"/>
     <Button fx:id="nextButton" text="Next" onAction="#handleNextAction"/>
     <!-- 其他步骤的控件可以在这里添加 -->

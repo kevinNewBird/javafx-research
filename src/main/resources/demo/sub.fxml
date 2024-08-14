@@ -1,0 +1,11 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+
+<!--<?import javafx.scene.control.Button?>-->
+<!--<?import javafx.scene.control.Label?>-->
+<!--<?import javafx.scene.layout.VBox?>-->
+
+<!--<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.vastdata.demo.SubController">-->
+<!--    <Label text="Welcome to the Installation Wizard"/>-->
+<!--    <Button fx:id="nextButton" text="Next" onAction="#handleNextAction"/>-->
+<!--    &lt;!&ndash; 其他步骤的控件可以在这里添加 &ndash;&gt;-->
+<!--</VBox>-->
