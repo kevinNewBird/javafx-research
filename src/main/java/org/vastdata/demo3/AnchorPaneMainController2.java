@@ -1,9 +1,13 @@
 package org.vastdata.demo3;
 
 import javafx.application.Application;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
+import javafx.scene.control.ListView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -43,10 +47,35 @@ public class AnchorPaneMainController2 extends Application {
             System.out.println(mc.getFxmllabel().getText());
         });
 
+        // 列表数据添加到布局视图中，将覆盖配置文件中的数据
+//        ListView listview = mc.getListview();
+//        ObservableList<Object> observableList = FXCollections.observableArrayList();
+//        observableList.add("121");
+//        listview.setItems(observableList);
+
+
+
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.setHeight(1000);
         stage.setWidth(1000);
         stage.show();
+
+        // 切换页面,也就是改变root(或者通过MyController去实现)
+        mc.getOtherbutton().setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                try {
+                    FXMLLoader fx2 = new FXMLLoader();
+//        AnchorPane root = (AnchorPane) fx.load(AnchorPaneMainController.class.getClassLoader()
+//                .getResourceAsStream("demo2/anchorpane.fxml"));
+                    fx2.setLocation(fx2.getClassLoader().getResource("demo3/other.fxml"));// 这里先加载，意味者fxml中配置文件定义的控制器已经被加载
+                    AnchorPane other = fx2.<AnchorPane>load();
+                    scene.setRoot(other);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
     }
 }

@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.collections.FXCollections?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
 <AnchorPane xmlns:fx="http://vastdata.javafx.com/javafx" fx:controller="org.vastdata.demo3.MyController">
     <children>
         <Label fx:id="fxmllabel" text="This is Label"/>
@@ -10,5 +15,39 @@
             <AnchorPane.leftAnchor>100</AnchorPane.leftAnchor>
             <AnchorPane.topAnchor>100</AnchorPane.topAnchor>
         </Button>
+
+        <Button fx:id="otherbutton" AnchorPane.leftAnchor="300" AnchorPane.topAnchor="100" text="other" prefWidth="100" prefHeight="100"/>
+        <Button fx:id="otherbutton2" AnchorPane.leftAnchor="500" AnchorPane.topAnchor="100" text="other2" prefWidth="100" prefHeight="100" onAction="#other2_action"/>
+
+        <!--图片视图加载器-->
+        <ImageView AnchorPane.topAnchor="300" AnchorPane.leftAnchor="200" fitWidth="100" preserveRatio="true">
+            <!--相对路径使用@，绝对路径使用file:-->
+            <Image url="@/image/img.png"/>
+            <!--            <Image url="file:/Users/zhaosong/workspace/github-workspace/javafx-research/src/main/resources/image/img.png"/>-->
+        </ImageView>
+
+        <!--位置布局-->
+        <BorderPane AnchorPane.topAnchor="500" AnchorPane.leftAnchor="100" style="-fx-background-color:#ffff55"
+                    prefWidth="200" prefHeight="200">
+            <left>
+                <!--列表数据-->
+                <ListView fx:id="listview" prefHeight="100" prefWidth="100">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="data1"/>
+                            <String fx:value="data2"/>
+                            <String fx:value="data3"/>
+                            <String fx:value="data4"/>
+                        </FXCollections>
+                    </items>
+                </ListView>
+            </left>
+
+            <!--下拉列表-->
+            <right>
+
+            </right>
+        </BorderPane>
+
     </children>
 </AnchorPane>
