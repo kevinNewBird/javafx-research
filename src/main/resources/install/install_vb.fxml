@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+
+<?import javafx.scene.control.Label?>
+<AnchorPane xmlns:fx="http://vastdata.javafx2.com/javafx"
+            fx:controller="org.vastdata.install.controller.InstallVBController">
+    <Label fx:id="label4" AnchorPane.leftAnchor="100" AnchorPane.topAnchor="300" prefHeight="100" prefWidth="600"
+           text="Start to Installation VB"/>
+</AnchorPane>
